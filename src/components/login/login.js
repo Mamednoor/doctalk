@@ -1,12 +1,12 @@
 import React from "react";
-
+import Logo from '../shares/dokitalk.png'
 import "./login.css";
 
 const Login = () => {
   return (
     <div className="login-container">
-      <div>
-        <img alt="" src="https://via.placeholder.com/150"></img>
+      <div className="login-div-img">
+        <img alt="" src={Logo}></img>
       </div>
       <form className="login-form">
         <label>

@@ -1,6 +1,14 @@
-.App {
-
-text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-
+body {
+    background-color: rgb(243, 252, 250);
+    width: 90%;
+    margin: auto;
+}
+.App {
+    text-align: center;
+    }

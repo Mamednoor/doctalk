@@ -1,0 +1,75 @@
+.register-patient-container{
+   height: 400px;
+   display: flex;
+   flex-direction: column;   
+   justify-content: space-evenly;
+
+}
+
+.register-form input {
+    /* border: 2px solid #3CB5DE;
+    border-radius: 4px;
+    height: 28px;
+    width: 250px;
+    margin-bottom: 32px; */
+    border: 2px solid #3CB5DE;
+    border-radius: 4px;
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.register-form input::placeholder{
+    text-align: center;
+
+}
+.register-div-img img {
+    width: 5em;
+}
+
+.register-container p {
+    margin-top: 1em;
+    font-size: 27px;
+    color: #3CB5DE;
+}
+.register-div-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 16em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+.register-div-button button {
+    border: 1px solid #3CB5DE;
+    width: 9.3em;
+    height: 2.7em;
+    text-decoration: none;
+    background-color: white;
+}
+
+.register-div-button button a:visited {
+    color: #3CB5DE;;
+}
+
+.register-div-button button a {
+    text-decoration: none;
+}
+.register-button-sign {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 21px;
+    border: none;
+    background-color: #3CB5DE;
+    height: 50px;
+    width: 100%;
+    
+}
+.register-button-sign p {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
