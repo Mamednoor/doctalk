@@ -19,7 +19,6 @@ const Register = () => {
           <div className="register-div-button">
             <NavLink
               to='/patientRegister'
-              activeClassName='FormTitle-Link--Active'
               className="register-navlink"
             >
               Patient
@@ -27,7 +26,6 @@ const Register = () => {
             <NavLink
               exact
               to='/medecinRegister'
-              activeClassName='FormTitle-Link--Active'
               className="register-navlink"
             >
               Doctor
