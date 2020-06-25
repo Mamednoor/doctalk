@@ -15,7 +15,7 @@ function CardDoctor(props) {
         const patient_id = 1
         axios.get(`http://localhost:7500/patients/${patient_id}/doctors/${doctor.id}`)
         .then(res => res.data.length !== 0 ? setFavorite(true) : setFavorite(false))
-    }, [])
+    }, [favorite])
 
     const createProfilIcon = () => {
         return (
