@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 import './CardDoctor.css'
-import mailIcon from '../../images/mail-02.svg'
-import heartIcon from '../../images/heart-02.svg'
-import fillHeartIcon from '../../images/heart-01.svg'
+import mailIcon from '../../Assets/mail-02.svg'
+import heartIcon from '../../Assets/heart-02.svg'
+import fillHeartIcon from '../../Assets/heart-01.svg'
 
 function CardDoctor(props) {
     const [favorite, setFavorite] = useState()
+    const [patient, setPatient] = useState([])
     const [invitation, setInvitation] = useState(false)
     const { doctor } = props
+    const history = useHistory();
+   
+    useEffect(() => {
+        const idPatient = localStorage.getItem('patient')
+        axios.get(`http://localhost:7500/patients/${idPatient}/doctors/${doctor.id}`)
+            .then(res => res.data.length !== 0 ? setFavorite(true) : setFavorite(false))
+    }, [favorite])
 
     useEffect(() => {
-        const patient_id = 1
-        axios.get(`http://localhost:7500/patients/${patient_id}/doctors/${doctor.id}`)
-        .then(res => res.data.length !== 0 ? setFavorite(true) : setFavorite(false))
-    }, [favorite])
+        const idPatient = localStorage.getItem('patient')
+        
+        axios.get(`http://localhost:7500/patients/${idPatient}`)
+        .then(res => setPatient(res.data))
+    }, [])
 
     const createProfilIcon = () => {
         return (
@@ -27,11 +37,14 @@ function CardDoctor(props) {
     }
     const sendInvitation = (e) => {
         const target = e.target
+        const docId = e.target.parentNode.id
+
         setInvitation(!invitation)
         if (invitation)
             target.style.opacity = '0.3'
         else
             target.style.opacity = '1'
+        history.push('/form', [docId, doctor.doc_lastname, patient[0].pa_firstname])
     }
     const handleSetFavorite = (e, id = 1) => {
         const target = e.target
