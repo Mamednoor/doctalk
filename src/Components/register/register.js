@@ -20,18 +20,17 @@ const Register = () => {
             <NavLink
               to='/patientRegister'
               activeClassName='FormTitle-Link--Active'
-              className="register-div-button"
+              className="register-navlink"
             >
-              Patient Register
+              Patient
             </NavLink>
-            or
             <NavLink
               exact
               to='/medecinRegister'
               activeClassName='FormTitle-Link--Active'
-              className="register-div-button"
+              className="register-navlink"
             >
-              Medecin register
+              Doctor
             </NavLink>
           </div>
           <Route exact path='/patientRegister' component={patientRegister} />

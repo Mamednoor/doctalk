@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import Login from "./Components/login/login";
-import Register from "./Components/register/register";
-import Navbar from "./Components/navbar/navbar";
-import ContactRequest from "./Components/contact/contactRequest"
+import Login from "./components/login/login";
+import Register from "./components/register/register";
+import Navbar from "./components/navbar/navbar";
+import ContactRequest from "./components/contact/contactRequest"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SearchDoctor from "./Components/SearchDoctor/SearchDoctor";
-import FavoriteDoctor from './Components/FavoriteDoctor/FavoriteDoctor'
+import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
+import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
 
 function App () {
   return (
