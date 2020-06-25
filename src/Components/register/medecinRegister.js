@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import "./register.css";
 
@@ -11,10 +11,9 @@ function Medecin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:7500/register', )
-  }
+useEffect(() => {
+  axios.post('http://localhost:7500/register', {lastname: lastname, firstname: firstname, profession: profession, doc_profession_code: professionCode, city: city, email: email, password: password})
+}, [])
 
   return (
     <div className="register-medecin-container">
@@ -68,6 +67,7 @@ function Medecin() {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <button type='submit' className="register-button-sign" onClick={(e) => e.preventDefault()}>Sign Up</button>
       </form>
     </div>
   );
