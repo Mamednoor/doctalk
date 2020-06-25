@@ -2,27 +2,30 @@ import React, { useState } from "react";
 import axios from "axios";
 import Logo from "../shares/dokitalk.png";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [active, setActive] = useState("");
-
+  const history = useHistory();
+  
   const handleClick = (e) => {
     if(active === 'doctor'){
       axios.post("http://localhost:7500/login/doctor", {
         doc_email: email,
         doc_password: password,
-      })
+      }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
     }else {
       axios.post("http://localhost:7500/login/patient", {
         pa_mail: email,
         pa_password: password,
-      })
+      }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
     return e.preventDefault();
   };
+
+
   }
   return (
     <div className="login-container">
