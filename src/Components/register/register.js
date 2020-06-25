@@ -7,6 +7,7 @@ import Logo from "../shares/dokitalk.png";
 import "./register.css";
 
 const Register = () => {
+  
   return (
     <Router>
       <div className="register-container">
