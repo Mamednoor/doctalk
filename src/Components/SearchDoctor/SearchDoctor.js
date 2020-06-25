@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import './SearchDoctor.css'
-import CardDoctor from './CardDoctor';
+import CardDoctor from '../CardDoctor/CardDoctor';
 
 function SearchDoctor(props) {
     const [professions, setProfessions] = useState([])
