@@ -11,10 +11,10 @@
 }
 
 .navbar-container {
+    text-align: center;
     background-color: #3CB5DE;
     height: 3.5em;
-<<<<<<< HEAD
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     display: flex;
@@ -26,11 +26,6 @@ li:focus-within{
     border: 1px solid white;
     background-color: #1487B5;
     border-radius: 3px;
-=======
-    position: fixed;
-    width: 100%;
-    bottom: 0;
->>>>>>> clean
 }
 
 .navbar-container ul {
@@ -42,5 +37,5 @@ li:focus-within{
     width: 1.9em;
 }
 .search-img:focus-within {
-    background-color: green;    
+    background-color: green;
 }

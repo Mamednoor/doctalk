@@ -6,11 +6,6 @@ import search from '../shares/searchdoctalk.png'
 import profile from '../shares/profile.png'
 import favori from '../../Assets/heart-03.svg'
 import message from '../../Assets/mail-03.svg'
-<<<<<<< HEAD
-
-
-=======
->>>>>>> clean
 
 import './navbar.css'
 

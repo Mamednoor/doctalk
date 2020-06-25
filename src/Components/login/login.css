@@ -10,6 +10,9 @@
     width: 100%;
     
 }
+.login-container {
+    text-align: center;
+}
 .login-button-sign p {
     color: white;
     text-align: center;
