@@ -1,0 +1,46 @@
+.login-button-sign {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 21px;
+    border: none;
+    background-color: #3CB5DE;
+    height: 50px;
+    width: 100%;
+    
+}
+.login-button-sign p {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+}
+.login-form input {
+    border: 2px solid #3CB5DE;
+    border-radius: 4px;
+    height: 28px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.login-form input::placeholder{
+    text-align: center;
+
+}
+.login-link{
+    text-decoration: none;
+}
+.login-link-title {
+    color: #3CB5DE;
+    font-size: 10px;
+}
+
+.login-div-img img {
+    width: 12em;
+}

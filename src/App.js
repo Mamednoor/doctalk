@@ -1,15 +1,40 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css'
+import "./App.css";
+import Login from "./components/login/login";
+import Register from "./components/register/register";
+import Navbar from "./components/navbar/navbar";
+import ContactRequest from "./components/contact/contactRequest"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
+import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
 
-import Chat from "./Components/Chat/Chat";
-import Join from "./Components/Join/Join";
-
-function App() {
+function App () {
   return (
-    <Router>
-      <Route path="/" exact component={Join} />
-      <Route path="/chat" component={Chat} />
+
+    <Router >
+    <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/search">
+          <SearchDoctor />
+          <Navbar />
+          </Route>
+          <Route path="/favori">
+          <FavoriteDoctor />
+            <Navbar />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/contactrequest">
+            <ContactRequest />
+          </Route>
+        </Switch>
+
+
+    </div>
     </Router>
   );
 }

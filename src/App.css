@@ -8,6 +8,9 @@
 
 body {
   background-color: rgb(243, 252, 250);
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
+.App {
+    text-align: center;
+    }
