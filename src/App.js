@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
 import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
 import Profile from './components/profile/profile'
+import MessagesBox from './components/MessageBox/messageBox'
 
 
 function App () {
@@ -36,10 +37,13 @@ function App () {
           <Route path="/profile">
             <Profile />
             <Navbar />
+            </Route>
+          <Route path="/messagebox">
+            <MessagesBox />
+            <Route />
+            <Navbar />
           </Route>
         </Switch>
-
-
     </div>
     </Router>
   );

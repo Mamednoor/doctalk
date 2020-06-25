@@ -1,33 +1,44 @@
 import React from "react";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
-import Patient from "./patientRegister";
-import Medecin from "./medecinRegister";
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import patientRegister from './patientRegister'
+import medecinRegister from './medecinRegister'
 import Logo from "../shares/dokitalk.png";
 
 import "./register.css";
 
 const Register = () => {
+  
   return (
     <Router>
       <div className="register-container">
         <div className="register-div-img">
-          <img alt="" src={Logo}></img>
+          <img alt="logo" src={Logo}></img>
         </div>
         <p>I AM A</p>
-        <div className="register-div-button">
-          <button>
-            <NavLink to='/patientRegister'>Patient</NavLink>
-          </button>
-          <button>
-            <NavLink to='/medecinRegister'>Medecin</NavLink>
-          </button>
+        <div className='Content-Form'>
+          <div className="register-div-button">
+            <NavLink
+              to='/patientRegister'
+              activeClassName='FormTitle-Link--Active'
+              className="register-navlink"
+            >
+              Patient
+            </NavLink>
+            <NavLink
+              exact
+              to='/medecinRegister'
+              activeClassName='FormTitle-Link--Active'
+              className="register-navlink"
+            >
+              Doctor
+            </NavLink>
+          </div>
+          <Route exact path='/patientRegister' component={patientRegister} />
+          <Route path='/medecinRegister' component={medecinRegister} />
         </div>
-        <Patient />
-        <Medecin />
-        <button className="register-button-sign">
-          <p>Sign Up</p>
-        </button>
-      </div>    
+      </div>
+      <input type='submit' className="register-button-sign" value='Sign Up'/>
+
     </Router>
   );
 };
