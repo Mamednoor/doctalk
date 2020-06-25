@@ -24,9 +24,10 @@
 }
 .login-form input {
     border: 2px solid #3CB5DE;
+    box-shadow: -2px 4px 4px 2px #E6E6E6;
     border-radius: 4px;
-    height: 28px;
-    width: 250px;
+    height: 3em;
+    width: 272px;
     margin-bottom: 20px;
 }
 .login-form input::placeholder{
@@ -42,5 +43,5 @@
 }
 
 .login-div-img img {
-    width: 12em;
+    width: 15em;
 }

@@ -16,6 +16,8 @@
     width: 250px;
     margin-bottom: 32px; */
     border: 2px solid #3CB5DE;
+    box-shadow: -2px 4px 4px 2px #E6E6E6;
+
     border-radius: 4px;
     height: 3em;
     width: 272px;

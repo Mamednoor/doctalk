@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-
 import './SearchDoctor.css'
 import CardDoctor from '../CardDoctor/CardDoctor';
 import Header from '../header/header'
+import Search from '../../Assets/search.png'
+import Home from '../../Assets/home.png'
+import Down from '../../Assets/down.png'
 
 function SearchDoctor(props) {
     const [professions, setProfessions] = useState([])
@@ -23,9 +25,20 @@ function SearchDoctor(props) {
         <div>
         <Header title="Search"/>
         <div className='SearchDoctor'>
-            <input placeholder='doctor name' onChange={(e) => setSearch(e.target.value)} value={search} />
-            <input placeholder='city' onChange={(e) => setCity(e.target.value)} value={city} />
-            <select id='profession-select' onChange={(e) => setProfessionType(e.target.value)}>
+            <div className="Search-icon">
+            <input placeholder='Search doctor name' onChange={(e) => setSearch(e.target.value)} value={search} />
+                <img src={Search} alt=""/>
+            </div>
+
+            <div className="City-icon">
+            <input placeholder='City' onChange={(e) => setCity(e.target.value)} value={city} />
+                <img src={Home}/>
+            </div>
+            <div className="Profession-icon">
+            <select 
+            className="Profession"
+            id='profession-select' 
+            onChange={(e) => setProfessionType(e.target.value)}>
                 <option value="">--Please select a profession-</option>
                 {professions.map((profession, key) => {
                     return (
@@ -34,6 +47,8 @@ function SearchDoctor(props) {
                 })}
 
             </select>
+            <img src={Down} />
+            </div>
             <div className='card-doctor-container'>
                 {doctors
                     .filter(doctor => doctor.doc_firstname.toLowerCase().startsWith(search.toLowerCase()) || doctor.doc_lastname.toLowerCase().startsWith(search.toLowerCase()))
