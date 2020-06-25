@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../header/header";
 import Modal from "react-modal";
 
-import Edit from "../../Assets/edit.png";
+import Modify from "../../Assets/modify.png";
 
 import "./profile.css";
 
@@ -30,11 +30,11 @@ const Profile = () => {
               <p className="profile-desc">*********</p>
             </article>
             <div className="profile-edit-icon">
-              <img src={Edit} alt="" />
             </div>
           </article>
           <div className="profile-button-mod">
             <button onClick={() => setModOpen(true)}>Modify</button>
+            <img onClick={() => setModOpen(true)} src={Modify} />
           </div>
         </article>
 
