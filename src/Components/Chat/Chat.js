@@ -52,6 +52,8 @@ const Chat = ({ location }) => {
     }
   };
 
+  
+
   return (
     <div className="outerContainer">
       <div className="container">
