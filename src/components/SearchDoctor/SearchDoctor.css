@@ -52,3 +52,7 @@
 .SearchDoctor .card-doctor-container {
     margin-top: 5em;
 }
+.SearchDoctor {
+    width: 90%;
+    margin: auto;
+}

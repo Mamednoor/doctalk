@@ -2,55 +2,39 @@ import React from "react";
 import "./App.css";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
-// import Navbar from "./components/navbar/navbar";
-import search from "./components/shares/searchdoctalk.png";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import SearchDoctor from './components/SearchDoctor/SearchDoctor'
+import Navbar from "./components/navbar/navbar";
+import ContactRequest from "./components/contact/contactRequest"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
 
-function App() {
+
+function App () {
   return (
+
+    <Router >
     <div className="App">
-      <Router>
-        <ul>
-          <li>
-            <Link to="/profile">
-              <img classname="navbar-img" alt="" src={search}></img>
-            </Link>
-          </li>
-          <li>
-            <Link to="/search">
-              {" "}
-              <img classname="navbar-img" alt="" src={search}></img>
-            </Link>
-          </li>
-          <li>
-            <Link to="/favori">
-              {" "}
-              <img classname="navbar-img" alt="" src={search}></img>
-            </Link>
-          </li>
-          <li>
-            <Link to="/message">
-              {" "}
-              <img classname="navbar-img" alt="" src={search}></img>
-            </Link>
-          </li>
-        </ul>
         <Switch>
-          <Route>
-            <Login path to="/login" />
+          <Route exact path="/">
+            <Login />
           </Route>
-          <Route path to="/register">
+          <Route path="/search">
+          <SearchDoctor />
+          <Navbar />
+          </Route>
+          <Route path="/favori">
+            <Register />
+            <Navbar />
+          </Route>
+          <Route path="/register">
             <Register />
           </Route>
-          <Route >
-      <SearchDoctor />
-      </Route>
+          <Route path="/contactrequest">
+            <ContactRequest />
+          </Route>
         </Switch>
-      </Router>
-      {/* <Navbar /> */}
     </div>
-  )
+    </Router>
+  );
 }
 
 export default App;

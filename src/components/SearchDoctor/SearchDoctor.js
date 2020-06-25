@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import './SearchDoctor.css'
 import CardDoctor from './CardDoctor';
+import Header from '../header/header'
 
 function SearchDoctor(props) {
     const [professions, setProfessions] = useState([])
@@ -19,6 +20,8 @@ function SearchDoctor(props) {
     }, [])
 
     return (
+        <div>
+        <Header title="Search"/>
         <div className='SearchDoctor'>
             <input placeholder='doctor name' onChange={(e) => setSearch(e.target.value)} value={search} />
             <input placeholder='city' onChange={(e) => setCity(e.target.value)} value={city} />
@@ -44,6 +47,7 @@ function SearchDoctor(props) {
                         }
                     })}
             </div>
+        </div>
         </div>
     );
 }

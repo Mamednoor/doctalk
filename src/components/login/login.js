@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from '../shares/dokitalk.png'
 import "./login.css";
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -15,10 +16,11 @@ const Login = () => {
         <label>
           <input type="text" name="name" placeholder="Enter your Password" />
         </label>
-        <a className="login-link" href="./">
+        
+          <Link className="login-link" to="/register">
           <p className="login-link-title">First time? Click here!</p>
-        </a>
-      </form>
+          </Link>
+        </form>
 
       <button className="login-button-sign">
         <p>Sign In</p>

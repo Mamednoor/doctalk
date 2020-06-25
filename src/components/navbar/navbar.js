@@ -3,6 +3,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import search from '../shares/searchdoctalk.png'
+import profile from '../shares/profile.png'
+import favori from '../../images/heart-03.svg'
+import message from '../../images/mail-03.svg'
+
+
+
+import './navbar.css'
 
 
 class Navbar extends Component {
@@ -10,36 +17,21 @@ class Navbar extends Component {
         return (
             
             <div className="navbar-container">
-                <div>
-                    <ul className="navbar-ul">
-                        <li>
-                            <Link to="/">
-                                <img></img>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/search">
-                            <img  alt="" src={search} href="/"></img>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                            <img></img>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                            <img></img>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="header-a" to="/">
-                                
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                <li>
+                  <Link to="/profile"><img className="search-img" alt="" src={profile}></img></Link>
+                </li>
+                <li>
+                  <Link to="/search"><img className="search-img" alt="" src={search}></img></Link>
+                </li>
+                <li>
+                  <Link to="/favori"><img className="search-img" alt="" src={favori}></img></Link>
+                </li>
+                <li>
+                  <Link to="/message"><img className="search-img" alt="" src={message}></img></Link>
+                </li>
+              </ul>
+              </div>
         )
     }
 }
