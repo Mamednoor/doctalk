@@ -28,7 +28,7 @@ class Navbar extends Component {
                   <Link to="/favori"><img className="search-img" alt="" src={favori}></img></Link>
                 </li>
                 <li>
-                  <Link to="/message"><img className="search-img" alt="" src={message}></img></Link>
+                  <Link to="/messagebox"><img className="search-img" alt="" src={message}></img></Link>
                 </li>
               </ul>
               </div>
