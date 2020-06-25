@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import './CardDoctor.css'
-import mailIcon from '../../images/mail-02.svg'
-import heartIcon from '../../images/heart-02.svg'
-import fillHeartIcon from '../../images/heart-01.svg'
+import mailIcon from '../../Assets/mail-02.svg'
+import heartIcon from '../../Assets/heart-02.svg'
+import fillHeartIcon from '../../Assets/heart-01.svg'
 
 function CardDoctor(props) {
     const [favorite, setFavorite] = useState()

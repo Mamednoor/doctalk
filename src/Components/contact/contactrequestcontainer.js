@@ -9,8 +9,8 @@ const ContactRequestContainer = (props) => {
     <div className="contact-container">
       <article className="contact-box">
           <article className="contact-icon">
-        <img src={Decline}></img>
-        <img src={Accept}></img>
+        <img src={Decline} alt='decline'/>
+        <img src={Accept} alt='accept' />
         </article>
         <article className="article-title">
           <h3>
