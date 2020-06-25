@@ -21,8 +21,7 @@ export default function SignIn(props) {
   const handleJoin = (e) => {
     const idPatient = localStorage.getItem('patient')
     const doctor_id = state[0]
-    axios.post('http://localhost:7500/invitations', { patient_id: idPatient, doctor_id: doctor_id, subject: subject, text: text, link: (`/chat?name=${name}&room=${room}`) })
-    return !name || !room ? e.preventDefault() : null
+    axios.post('http://localhost:7500/invitations', { patient_id: idPatient, doctor_id: doctor_id, subject: subject, text: text, link: (`/chat?name=Dr.${state[1]}&room=${room}&isDoctor=${true}`) })
   }
   const handleSelect = (e) => {
     setRoom(getRandomInt() + e.target.value)
@@ -54,7 +53,7 @@ export default function SignIn(props) {
 
         <Link
           onClick={(e) => handleJoin(e)}
-          to={`/chat?name=${name}&room=${room}`}
+          to={`/chat?name=${name}&room=${room}&isDoctor=${false}`}
         >
           <button className={"button mt-20"} type="submit">
             Send invitation

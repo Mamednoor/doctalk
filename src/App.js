@@ -12,18 +12,17 @@ import FavoriteDoctor from './Components/FavoriteDoctor/FavoriteDoctor'
 
 function App() {
   const whatPrint = () => {
-    if(localStorage.getItem('isDoctor') === true){
+    if(localStorage.getItem('isDoctor') !== 'true'){
       return <FavoriteDoctor />
     }else {
       return <ContactRequest />
     }
   }
   localStorage.setItem('patient', 1)
-  localStorage.setItem('doctor', 1)
+  localStorage.setItem('doctor', 3)
   localStorage.setItem('isDoctor', true)
   // console.log(localStorage.getItem('isDoctor'))
   return (
-
     <Router >
       <div className="App">
         <Switch>
