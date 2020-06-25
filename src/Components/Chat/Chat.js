@@ -1,44 +1,71 @@
-import React, { useState, useEffect } from 'react'
-import queryString from 'query-string'
-import io from 'socket.io-client'
+import React, { useState, useEffect } from "react";
+import queryString from "query-string";
+import io from "socket.io-client";
 
+import TextArea from "../TextArea/TextArea";
+import Messages from "../Messages/Messages";
+import InfoBar from "../InfoBar/InfoBar";
+import Input from "../Input/Input";
 
-let socket
+import "./Chat.css";
 
-const Chat = ({location}) => {
+let socket;
 
-  const [name, setName] = useState('')
-  const [room, setRoom] = useState('')
-  const ENDPOINT ='http://localhost:7500'
+const Chat = ({ location }) => {
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
+  const [users, setUsers] = useState("");
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const ENDPOINT = "http://localhost:7500";
 
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search)
-    console.log(name, room)
-    socket = io(ENDPOINT)
+    const { name, room } = queryString.parse(location.search);
 
-    setName(name)
-    setRoom(room)
+    socket = io(ENDPOINT);
 
-    socket.emit('join', { name, room }, ({error}) => {
-      alert(error)
-      console.log(socket)
-    })
+    setRoom(room);
+    setName(name);
 
-  }, [ENDPOINT, location.search])
+    socket.emit("join", { name, room }, (error) => {
+      if (error) {
+        alert(error);
+      }
+    });
+  }, [ENDPOINT, location.search]);
+
+  useEffect(() => {
+    socket.on("message", (message) => {
+      setMessages((messages) => [...messages, message]);
+    });
+
+    socket.on("roomData", ({ users }) => {
+      setUsers(users);
+    });
+  }, []);
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+
+    if (message) {
+      socket.emit("sendMessage", message, () => setMessage(""));
+    }
+  };
 
   return (
-    <>
-      <div>
-        <h1>DocTalk</h1>
+    <div className="outerContainer">
+      <div className="container">
+        <InfoBar room={room} />
+        <Messages messages={messages} name={name} />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage}
+        />
       </div>
-      <div>
-      <form>
-        <input />
-        <button>Send</button>
-      </form>
-      </div>
-    </>
-  )
-}
+      <TextArea users={users} />
+    </div>
+  );
+};
 
-export default Chat
+export default Chat;
