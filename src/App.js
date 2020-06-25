@@ -5,6 +5,7 @@ import Register from "./components/register/register";
 // import Navbar from "./components/navbar/navbar";
 import search from "./components/shares/searchdoctalk.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SearchDoctor from './components/SearchDoctor/SearchDoctor'
 
 function App() {
   return (
@@ -42,11 +43,14 @@ function App() {
           <Route path to="/register">
             <Register />
           </Route>
+          <Route >
+      <SearchDoctor />
+      </Route>
         </Switch>
       </Router>
       {/* <Navbar /> */}
     </div>
-  );
+  )
 }
 
 export default App;

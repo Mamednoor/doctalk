@@ -1,0 +1,54 @@
+.SearchDoctor input{
+    width: 100%;
+    margin: 1em 0;
+    padding: .75em 0px;
+    padding-left: 1em;
+    border: none;
+    border: 1px solid hsl(195, 71%, 55%);
+    border-right: solid 3px#3CB5DE;
+    border-radius: 4px;
+}
+
+.SearchDoctor input:nth-of-type(2) {
+    margin-bottom: 2em;
+}
+
+.SearchDoctor select {
+    width: 100%;
+    border: none;
+    appearance: none;
+
+    color: rgb(77, 90, 94);
+	height: auto;
+	border: 0; 
+	margin: 0;
+	padding: .75em;
+    border-radius: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #3CB5DE;
+    /* border-right: solid 5px#3CB5DE; */
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.SearchDoctor select::after { 
+	/* Le pointeur du select */
+	content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: .75em;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #444; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
+}
+
+.SearchDoctor .card-doctor-container {
+    margin-top: 5em;
+}
