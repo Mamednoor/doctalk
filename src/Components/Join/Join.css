@@ -1,0 +1,76 @@
+.joinOuterContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.joinInnerContainer {
+  width: 20%;
+}
+
+.joinInput {
+  border-radius: 0;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.heading {
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #2979FF;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .joinOuterContainer {
+    height: 100%;
+  }
+
+  .joinInnerContainer {
+    width: 90%;
+  }
+
+
+}
+
+button:focus {
+  outline: 0;
+}
+
+.JoinSelect select {
+  width: 100%;
+  border: none;
+  appearance: none;
+
+  color: rgb(77, 90, 94);
+height: auto;
+border: 0; 
+margin: 0;
+padding: .75em;
+  border-radius: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #3CB5DE;
+  /* border-right: solid 5px#3CB5DE; */
+
+overflow: hidden;
+text-overflow: ellipsis;
+}

@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import './SearchDoctor.css'
+<<<<<<< HEAD:src/Components/SearchDoctor/SearchDoctor.js
+import CardDoctor from '../CardDoctor/CardDoctor';
+=======
 import CardDoctor from './CardDoctor';
 import Header from '../header/header'
+>>>>>>> dev:src/components/SearchDoctor/SearchDoctor.js
 
 function SearchDoctor(props) {
     const [professions, setProfessions] = useState([])
