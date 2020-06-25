@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import SearchDoctor from './components/SearchDoctor/SearchDoctor'
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>First Step</p>
-      </header>
+      <SearchDoctor />
     </div>
-  );
+  )
 }
 
 export default App;
