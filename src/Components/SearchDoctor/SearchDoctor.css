@@ -5,7 +5,7 @@
     padding-left: 1em;
     border: none;
     border: 1px solid hsl(195, 71%, 55%);
-    border-right: solid 3px#3CB5DE;
+    /* border-right: solid 3px#3CB5DE; */
     border-radius: 4px;
 }
 
@@ -27,7 +27,7 @@
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #3CB5DE;
-    /* border-right: solid 5px#3CB5DE; */
+    border-right: solid 5px#3CB5DE;
 
 	overflow: hidden;
 	text-overflow: ellipsis;

@@ -3,6 +3,8 @@ import axios from 'axios';
 import CardDoctor from '../CardDoctor/CardDoctor';
 import Header from '../header/header'
 
+import './FavoriteDoctor.css'
+
 
 function FavoriteDoctor(props) {
     const [favoriteDoc, setFavoriteDoc] = useState([])
@@ -13,14 +15,17 @@ function FavoriteDoctor(props) {
     })
     axios.get()
     return (
-        <div className='FavoriteDoctor'>
+        <>
             <Header title="Favorite" />
-            {favoriteDoc.map(doctor => {
-                return <CardDoctor doctor={doctor} />
-            })
-            }
+            <div className='FavoriteDoctor'>
 
-        </div>
+                {favoriteDoc.map(doctor => {
+                    return <CardDoctor doctor={doctor} />
+                })
+                }
+
+            </div>
+        </>
     );
 }
 

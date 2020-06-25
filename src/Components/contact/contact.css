@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid rgb(175, 175, 175);
+    border: 1px solid #3CB5DE;
     margin-top: 15px;
-
+    background-color: #fff;
+    padding: 0.5em;
 }
 .contact-container {
     width: 90%;
@@ -21,6 +22,7 @@
 }
 .contact-box img {
     width: 2.3em;
+    height: 2.3em;
     margin-right: 12px;
  
 }
@@ -37,6 +39,7 @@
 .contactreq-message{
     height: 95px;
     width: 90%;
+    padding: 0.75em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
