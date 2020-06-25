@@ -7,6 +7,8 @@ import ContactRequest from "./components/contact/contactRequest"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
 import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
+import Profile from './components/profile/profile'
+
 
 function App () {
   return (
@@ -30,6 +32,10 @@ function App () {
           </Route>
           <Route path="/contactrequest">
             <ContactRequest />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+            <Navbar />
           </Route>
         </Switch>
 

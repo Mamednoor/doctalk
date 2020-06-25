@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardDoctor from '../SearchDoctor/CardDoctor';
+import CardDoctor from '../CardDoctor/CardDoctor';
 import Header from '../header/header'
 
 
