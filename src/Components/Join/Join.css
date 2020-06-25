@@ -1,24 +1,9 @@
-html, body {
-  font-family: 'Roboto', sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-#root {
-  height: 100vh;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .joinOuterContainer {
   display: flex;
   justify-content: center;
   text-align: center;
   height: 100vh;
   align-items: center;
-  background-color: #1A1A1D;
 }
 
 .joinInnerContainer {
@@ -68,4 +53,24 @@ html, body {
 
 button:focus {
   outline: 0;
+}
+
+.JoinSelect select {
+  width: 100%;
+  border: none;
+  appearance: none;
+
+  color: rgb(77, 90, 94);
+height: auto;
+border: 0; 
+margin: 0;
+padding: .75em;
+  border-radius: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #3CB5DE;
+  /* border-right: solid 5px#3CB5DE; */
+
+overflow: hidden;
+text-overflow: ellipsis;
 }
