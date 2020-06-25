@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState } from "react";
 import axios from 'axios'
 import "./register.css";
 
@@ -11,9 +11,10 @@ function Medecin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-useEffect(() => {
-  axios.post('http://localhost:7500/register', {lastname: lastname, firstname: firstname, profession: profession, doc_profession_code: professionCode, city: city, email: email, password: password})
-}, [])
+  const handleClick = (e) => { // ajouter les doc_ au req 
+  axios.post('http://localhost:7500/doctor', {doc_city: city, doc_email: email, doc_firstname: firstname, doc_lastname: lastname,doc_password: password, doc_profession: profession, doc_professionnal_code: professionCode})
+  return e.preventDefault()
+}
 
   return (
     <div className="register-medecin-container">
@@ -67,7 +68,7 @@ useEffect(() => {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type='submit' className="register-button-sign" onClick={(e) => e.preventDefault()}>Sign Up</button>
+        <button type='submit' className="register-button-sign" onClick={e => handleClick(e)}>Sign Up</button>
       </form>
     </div>
   );
