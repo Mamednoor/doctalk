@@ -68,7 +68,6 @@ function Medecin() {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input type='submit' className="register-button-sign" value='Sign Up' onClick={(e) => handleSubmit(e)}/>
       </form>
     </div>
   );

@@ -5,6 +5,9 @@
    justify-content: space-evenly;
 
 }
+.register-form {
+    margin-top: 3em;
+}
 
 .register-form input {
     /* border: 2px solid #3CB5DE;
@@ -14,8 +17,8 @@
     margin-bottom: 32px; */
     border: 2px solid #3CB5DE;
     border-radius: 4px;
-    height: 30px;
-    width: 250px;
+    height: 3em;
+    width: 272px;
     margin-bottom: 20px;
 }
 .register-form input::placeholder{
@@ -28,29 +31,37 @@
 
 .register-container p {
     margin-top: 1em;
+    margin-bottom: 1em;
+
     font-size: 27px;
     color: #3CB5DE;
 }
-.register-div-button {
+.register-div-button{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 16em;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3em;
+    
 }
-
-.register-div-button button {
+.register-navlink {
     border: 1px solid #3CB5DE;
-    width: 9.3em;
-    height: 2.7em;
+    background-color: #3CB5DE;
+    height: 2.1em;
+    width: 6.3em;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
-    background-color: white;
+    font-size: 21px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
-
-.register-div-button button a:visited {
-    color: #3CB5DE;;
+.register-navlink:focus{
+    background-color: white;
+    color: #3CB5DE;
+    border: 2px solid #3CB5DE;
 }
 
 .register-div-button button a {
@@ -66,10 +77,9 @@
     background-color: #3CB5DE;
     height: 50px;
     width: 100%;
-    
+    color: white;
 }
 .register-button-sign p {
-    color: white;
     text-align: center;
     margin: auto;
 }
