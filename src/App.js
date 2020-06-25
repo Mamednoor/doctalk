@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/navbar";
 import ContactRequest from "./components/contact/contactRequest"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
-
+import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
 
 function App () {
   return (
@@ -22,7 +22,7 @@ function App () {
           <Navbar />
           </Route>
           <Route path="/favori">
-            <Register />
+          <FavoriteDoctor />
             <Navbar />
           </Route>
           <Route path="/register">
@@ -32,6 +32,8 @@ function App () {
             <ContactRequest />
           </Route>
         </Switch>
+
+
     </div>
     </Router>
   );
