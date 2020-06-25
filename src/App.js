@@ -7,6 +7,7 @@ import ContactRequest from "./Components/contact/contactRequest"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchDoctor from "./Components/SearchDoctor/SearchDoctor";
 import FavoriteDoctor from './Components/FavoriteDoctor/FavoriteDoctor'
+import Profile from './Components/profile/profile'
 import MessagesBox from './Components/MessageBox/messageBox'
 
 
@@ -33,13 +34,16 @@ function App () {
           <Route path="/contactrequest">
             <ContactRequest />
           </Route>
+          <Route path="/profile">
+            <Profile />
+            <Navbar />
+            </Route>
           <Route path="/messagebox">
             <MessagesBox />
+            <Route />
             <Navbar />
           </Route>
         </Switch>
-
-
     </div>
     </Router>
   );
