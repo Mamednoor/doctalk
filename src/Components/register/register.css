@@ -1,10 +1,10 @@
-.register-patient-container{
-   height: 400px;
-   display: flex;
-   flex-direction: column;   
-   justify-content: space-evenly;
-
+.register-patient-container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+
 .register-form {
     margin-top: 3em;
 }
@@ -23,10 +23,11 @@
     width: 272px;
     margin-bottom: 20px;
 }
-.register-form input::placeholder{
-    text-align: center;
 
+.register-form input::placeholder {
+    text-align: center;
 }
+
 .register-div-img img {
     width: 5em;
 }
@@ -36,19 +37,23 @@
     margin-bottom: 1em;
 
     font-size: 27px;
-    color: #3CB5DE;
+    color: #3cb5de;
 }
-.register-div-button{
+.register-container {
+    text-align: center;
+}
+
+.register-div-button {
     display: flex;
     flex-direction: row;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    
 }
+
 .register-navlink {
-    border: 1px solid #3CB5DE;
-    background-color: #3CB5DE;
+    border: 1px solid #3cb5de;
+    background-color: #3cb5de;
     height: 2.1em;
     width: 6.3em;
     margin-left: auto;
@@ -60,15 +65,24 @@
     flex-direction: column;
     color: white;
 }
-.register-navlink:focus{
+
+.register-navlink:focus {
     background-color: white;
-    color: #3CB5DE;
-    border: 2px solid #3CB5DE;
+    color: #3cb5de;
+    border: 2px solid #3cb5de;
 }
+
+.register-navlink:active{
+    background-color: white;
+    color: #3cb5de;
+    border: 2px solid #3cb5de;
+}
+
 
 .register-div-button button a {
     text-decoration: none;
 }
+
 .register-button-sign {
     z-index: 0;
     position: absolute;
@@ -76,12 +90,34 @@
     left: 0;
     font-size: 21px;
     border: none;
-    background-color: #3CB5DE;
+    background-color: #3cb5de;
     height: 50px;
     width: 100%;
     color: white;
+    position :fixed;
 }
+
 .register-button-sign p {
     text-align: center;
     margin: auto;
 }
+
+.link-home-register {
+    color: #3CB5DE;
+    position:absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+}
+
+.p-home-register {
+    color: #3CB5DE;
+    font-size: 2px;
+}
+
+.link-home-register {
+    text-decoration: none;
+    color: #3CB5DE;
+    padding: 8px;
+}
+

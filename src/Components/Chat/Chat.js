@@ -20,14 +20,14 @@ const Chat = ({ location }) => {
   const ENDPOINT = "http://localhost:7500";
 
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search);
+    const { name, room, isDoctor } = queryString.parse(location.search);
 
     socket = io(ENDPOINT);
 
     setRoom(room);
     setName(name);
 
-    socket.emit("join", { name, room }, (error) => {
+    socket.emit("join", { name, room, isDoctor }, (error) => {
       if (error) {
         alert(error);
       }
@@ -52,9 +52,8 @@ const Chat = ({ location }) => {
     }
   };
 
-  
-
   return (
+    
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />

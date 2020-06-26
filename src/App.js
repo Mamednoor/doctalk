@@ -1,31 +1,40 @@
 import React from "react";
 import "./App.css";
-import Login from "./components/login/login";
-import Register from "./components/register/register";
-import Navbar from "./components/navbar/navbar";
-import ContactRequest from "./components/contact/contactRequest"
+import Login from "./Components/login/login";
+import Register from "./Components/register/register";
+import Navbar from "./Components/navbar/navbar";
+import Join from "./Components/Join/Join"
+import Chat from "./Components/Chat/Chat"
+import ContactRequest from "./Components/contact/contactRequest"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SearchDoctor from "./components/SearchDoctor/SearchDoctor";
-import FavoriteDoctor from './components/FavoriteDoctor/FavoriteDoctor'
-import Profile from './components/profile/profile'
-import MessagesBox from './components/MessageBox/messageBox'
+import SearchDoctor from "./Components/SearchDoctor/SearchDoctor";
+import FavoriteDoctor from './Components/FavoriteDoctor/FavoriteDoctor'
+import Profile from './Components/profile/profile'
+import MessagesBox from './Components/MessageBox/messageBox'
 
 
-function App () {
+function App() {
+  const whatPrint = () => {
+    if (localStorage.getItem('isDoctor') !== 'true') {
+      return <FavoriteDoctor />
+    } else {
+      return <ContactRequest />
+    }
+  }
+  
   return (
-
     <Router >
-    <div className="App">
+      <div className="App">
         <Switch>
           <Route exact path="/">
             <Login />
           </Route>
           <Route path="/search">
-          <SearchDoctor />
-          <Navbar />
+            <SearchDoctor />
+            <Navbar />
           </Route>
           <Route path="/favori">
-          <FavoriteDoctor />
+            {whatPrint()}
             <Navbar />
           </Route>
           <Route path="/register">
@@ -37,15 +46,17 @@ function App () {
           <Route path="/profile">
             <Profile />
             <Navbar />
-            </Route>
+          </Route>
           <Route path="/messagebox">
             <MessagesBox />
             <Route />
             <Navbar />
           </Route>
+        <Route path="/form" component={Join} />
+        <Route path="/chat" component={Chat} />
         </Switch>
-    </div>
-    </Router>
+      </div>
+    </Router >
   );
 }
 
