@@ -22,7 +22,7 @@ const Login = () => {
         pa_mail: email,
         pa_password: password,
       }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
-    // return e.preventDefault();
+    return e.preventDefault();
   };
 
   }
