@@ -16,14 +16,15 @@ const Login = () => {
       axios.post("http://localhost:7500/login/doctor", {
         doc_email: email,
         doc_password: password,
-      }).then(res => res.status === 200 ? history.push('/search') : history.push('/favori'))
+      }).then(res => res.status === 200 ? history.push('/search') : history.push('/y'))
+      return e.preventDefault();
     }else {
       axios.post("http://localhost:7500/login/patient", {
         pa_mail: email,
         pa_password: password,
       }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
-    return e.preventDefault();
-  };
+      return e.preventDefault();
+    };
 
   }
   return (

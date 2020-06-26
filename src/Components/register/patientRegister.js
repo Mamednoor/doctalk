@@ -10,7 +10,7 @@ function Patient() {
   const [password, setPassword] = useState("");
 
   const handleClick = (e) => { // ajouter les doc_ au req 
-    axios.post('http://localhost:7500/login', {pa_city: city,  pa_firstname: firstname, pa_lastname: lastname,pa_mail: email,pa_password: password})
+    axios.post('http://localhost:7500/patients', {pa_lastname: lastname, pa_firstname: firstname, pa_city: city, pa_mail: email, pa_password: password})
     return e.preventDefault()
   }
 
@@ -46,7 +46,7 @@ function Patient() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          type="text"
+          type="password"
           name="password"
           value={password}
           placeholder="Password"
