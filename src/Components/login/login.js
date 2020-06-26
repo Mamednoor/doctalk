@@ -16,13 +16,13 @@ const Login = () => {
       axios.post("http://localhost:7500/login/doctor", {
         doc_email: email,
         doc_password: password,
-      }).then(res => res.status === 200 ? history.push('/search') : history.push('/favori'))
+      }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
     }else {
       axios.post("http://localhost:7500/login/patient", {
         pa_mail: email,
         pa_password: password,
       }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
-    return e.preventDefault();
+    // return e.preventDefault();
   };
 
   }
@@ -36,7 +36,7 @@ const Login = () => {
           <input 
             type="button" 
             id="patient" 
-            name="drone" 
+            name="patient" 
             value="patient"
             onClick={(e) => setActive(e.target.id)}
           />
@@ -44,7 +44,7 @@ const Login = () => {
           <input
             type="button"
             id="doctor"
-            name="drone"
+            name="doctor"
             value="doctor"
             onClick={(e) => setActive(e.target.id)}
           />
@@ -52,7 +52,7 @@ const Login = () => {
 
         <label>
           <input
-            type="text"
+            type="email"
             name="email"
             value={email}
             placeholder="Enter your Email"
@@ -61,7 +61,7 @@ const Login = () => {
         </label>
         <label>
           <input
-            type="text"
+            type="password"
             name="name"
             value={password}
             placeholder="Enter your Password"
@@ -72,7 +72,7 @@ const Login = () => {
           <p className="login-link-title">First time? Click here!</p>
         </Link>
 
-        <button className="login-button-sign" onClick={(e) => handleClick(e)}>
+        <button type="submit" className="login-button-sign" onClick={(e) => handleClick(e)}>
           <p>Sign Up</p>
         </button>
       </form>
