@@ -70,6 +70,13 @@
     border: 2px solid #3cb5de;
 }
 
+.register-navlink:active{
+    background-color: white;
+    color: #3cb5de;
+    border: 2px solid #3cb5de;
+}
+
+
 .register-div-button button a {
     text-decoration: none;
 }
