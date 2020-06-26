@@ -62,7 +62,7 @@ const Login = () => {
           <input
             type="button"
             id="doctor"
-            name="drone"
+            name="doctor"
             value="doctor"
             onClick={(e) => setActive(e.target.id)}
           />
@@ -80,7 +80,7 @@ const Login = () => {
         <label>
           <input
             type="password"
-            name="password"
+            name="name"
             value={password}
             placeholder="Enter your Password"
             onChange={(e) => setPassword(e.target.value)}
@@ -90,7 +90,7 @@ const Login = () => {
           <p className="login-link-title">First time? Click here!</p>
         </Link>
 
-        <button className="login-button-sign" onClick={(e) => handleClick(e)}>
+        <button type="submit" className="login-button-sign" onClick={(e) => handleClick(e)}>
           <p>Sign Up</p>
         </button>
       </form>
