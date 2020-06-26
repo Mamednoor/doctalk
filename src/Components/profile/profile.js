@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../header/header";
 import Modal from "react-modal";
 
@@ -20,7 +20,6 @@ const Profile = () => {
       <Header title="Profile" />
       <article className="profile-box">
         <p className="profile-box-p">My informations</p>
-
         <article className="profile-detail">
           <article className="profile-contain-desc">
             <article className="profile-title">

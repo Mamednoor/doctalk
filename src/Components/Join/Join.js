@@ -28,7 +28,7 @@ export default function SignIn(props) {
     setSubject(e.target.value)
   }
 
-  console.log(state[2])
+  console.log(localStorage.getItem('patient'))
   return (
     <div className="joinOuterContainer">
       <Header title="Contact" />
@@ -42,10 +42,15 @@ export default function SignIn(props) {
             <option value="">--Please select a subject--</option>
             <option className="joinInput" value="Headach">Headach</option>
             <option className="joinInput" value="Pregnant">Pregnant</option>
-            <option className="joinInput" value="Follow">Follow</option>
-            <option className="joinInput" value="Ordonnance">Ordonnance</option>
-            <option className="joinInput" value="Exemple">Exemple</option>
-            <option className="joinInput" value="Exemple">Exemple</option>
+            <option className="joinInput" value="Vomit">Vomit</option>
+            <option className="joinInput" value="Order">Order</option>
+            <option className="joinInput" value="Covid-19">Covid-19</option>
+            <option className="joinInput" value="Teeth decay">Teeth decay</option>
+            <option className="joinInput" value="Stomach ache">Stomach ache</option>
+            <option className="joinInput" value="Digestive disorders">Digestive disorders</option>
+            <option className="joinInput" value="Measles">Measles</option>
+            <option className="joinInput" value="Other">Other</option>
+
           </select>
         </div>
 

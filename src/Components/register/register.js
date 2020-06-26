@@ -24,6 +24,12 @@ const Register = () => {
               Patient
             </NavLink>
             <NavLink
+              to='/'
+              className="register-navlink"
+            >
+            Home
+            </NavLink>
+            <NavLink
               exact
               to='/medecinRegister'
               className="register-navlink"
@@ -36,7 +42,6 @@ const Register = () => {
         </div>
       </div>
       <input type='submit' className="register-button-sign" value='Sign Up'/>
-
     </Router>
   );
 };
