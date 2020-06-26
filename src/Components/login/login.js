@@ -14,7 +14,7 @@ const Login = () => {
     if (active === 'doctor') {
       axios.post("http://localhost:7500/login/doctor", {
         doc_email: email,
-        do_password: password,
+        doc_password: password,
       }).then(res => {
         if(res.status !== 401){
           console.log(res.data)
