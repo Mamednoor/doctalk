@@ -10,21 +10,39 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [active, setActive] = useState("");
   const history = useHistory();
-  
   const handleClick = (e) => {
-    if(active === 'doctor'){
+    if (active === 'doctor') {
       axios.post("http://localhost:7500/login/doctor", {
         doc_email: email,
-        doc_password: password,
-      }).then(res => res.status === 200 ? history.push('/search') : history.push('/favori'))
-    }else {
+        do_password: password,
+      }).then(res => {
+        if(res.status !== 401){
+          console.log(res.data)
+          localStorage.clear();
+          localStorage.setItem('doctor', res.data.id)
+          localStorage.setItem('isDoctor', true)
+          history.push('/favori')
+        }else{
+          history.push('/')
+        } 
+      })
+    } 
+    if(active === 'patient') {
       axios.post("http://localhost:7500/login/patient", {
         pa_mail: email,
         pa_password: password,
-      }).then(res => res.status === 200 ? history.push('/search') : history.push('/'))
+      }).then(res => {
+        if(res.status !== 401){
+          localStorage.clear();
+          localStorage.setItem('patient', res.data.id)
+          localStorage.setItem('isDoctor', false)
+          history.push('/search')
+        }else{
+          history.push('/')
+        } 
+      })
+    }
     return e.preventDefault();
-  };
-
   }
   return (
     <div className="login-container">
@@ -33,10 +51,10 @@ const Login = () => {
       </div>
       <form className="login-form">
         <div className="radio-container">
-          <input 
-            type="button" 
-            id="patient" 
-            name="drone" 
+          <input
+            type="button"
+            id="patient"
+            name="drone"
             value="patient"
             onClick={(e) => setActive(e.target.id)}
           />
@@ -52,7 +70,7 @@ const Login = () => {
 
         <label>
           <input
-            type="text"
+            type="email"
             name="email"
             value={email}
             placeholder="Enter your Email"
@@ -61,8 +79,8 @@ const Login = () => {
         </label>
         <label>
           <input
-            type="text"
-            name="name"
+            type="password"
+            name="password"
             value={password}
             placeholder="Enter your Password"
             onChange={(e) => setPassword(e.target.value)}

@@ -21,10 +21,7 @@ function App() {
       return <ContactRequest />
     }
   }
-  localStorage.setItem('patient', 1)
-  localStorage.setItem('doctor', 3)
-  localStorage.setItem('isDoctor', true)
-  // console.log(localStorage.getItem('isDoctor'))
+  
   return (
     <Router >
       <div className="App">
