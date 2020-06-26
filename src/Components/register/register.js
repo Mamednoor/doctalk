@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink, Link } from 'react-router-dom'
 import patientRegister from './patientRegister'
 import medecinRegister from './medecinRegister'
 import Logo from "../shares/dokitalk.png";
@@ -24,12 +24,6 @@ const Register = () => {
               Patient
             </NavLink>
             <NavLink
-              to='/'
-              className="register-navlink"
-            >
-            Home
-            </NavLink>
-            <NavLink
               exact
               to='/medecinRegister'
               className="register-navlink"
@@ -37,6 +31,9 @@ const Register = () => {
               Doctor
             </NavLink>
           </div>
+          <Link className="link-home-register" to="/">
+            <p className="p-home-register">Back home</p>
+          </Link>
           <Route exact path='/patientRegister' component={patientRegister} />
           <Route path='/medecinRegister' component={medecinRegister} />
         </div>

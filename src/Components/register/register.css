@@ -37,6 +37,9 @@
     font-size: 27px;
     color: #3cb5de;
 }
+.register-container {
+    text-align: center;
+}
 
 .register-div-button {
     display: flex;
@@ -87,4 +90,16 @@
 .register-button-sign p {
     text-align: center;
     margin: auto;
+}
+
+.link-home-register {
+    position:absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+}
+
+.p-home-register {
+    color: #3CB5DE;
+    font-size: 2px;
 }
