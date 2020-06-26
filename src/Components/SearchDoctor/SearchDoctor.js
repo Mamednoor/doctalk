@@ -31,7 +31,7 @@ function SearchDoctor(props) {
 
             <div className="City-icon">
             <input placeholder='City' onChange={(e) => setCity(e.target.value)} value={city} />
-                <img src={Home}/>
+                <img src={Home} alt=''/>
             </div>
             <div className="Profession-icon">
             <select 
@@ -46,12 +46,12 @@ function SearchDoctor(props) {
                 })}
 
             </select>
-            <img src={Down} />
+            <img src={Down} alt=''/>
             </div>
             <div className='card-doctor-container'>
                 {doctors
                     .filter(doctor => doctor.doc_firstname.toLowerCase().startsWith(search.toLowerCase()) || doctor.doc_lastname.toLowerCase().startsWith(search.toLowerCase()))
-                    .filter(doctor => doctor.doc_city.startsWith(city))
+                    .filter(doctor => doctor.doc_city.toLowerCase().startsWith(city.toLowerCase()))
                     .filter(doctor => doctor.pro_name.includes(professionType))
                     .map((doctor, key) => {
                         if(search !== '' || city !== '' || professionType !== ''){

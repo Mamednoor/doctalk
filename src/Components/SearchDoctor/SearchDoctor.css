@@ -1,3 +1,8 @@
+.SearchDoctor {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5em;
+}
 .SearchDoctor input{
     width: 100%;
     margin: 1em 0;
@@ -29,7 +34,7 @@
     border: 2px solid #3CB5DE;
     /* border-right: solid 5px#3CB5DE; */
     box-shadow: -2px 4px 4px 2px #E6E6E6;
-
+    margin-top: 1em;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -53,11 +58,6 @@
 .SearchDoctor .card-doctor-container {
     margin-top: 5em;
 }
-.SearchDoctor {
-    width: 90%;
-    margin: auto;
-}
-
 
 .Search-icon {
     position: relative;
@@ -88,5 +88,5 @@
     position: absolute;
     width: 23px;
     right: 10px;
-    top: 10px;
+    top: 25px;
 }

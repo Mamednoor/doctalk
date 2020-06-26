@@ -1,6 +1,6 @@
 import React from "react";
-import Accept from "../shares/accept.png";
-import Decline from "../shares/close.png";
+import Accept from "../shares/accept.svg";
+import Decline from "../shares/close.svg";
 
 import { Link } from "react-router-dom"
 
@@ -20,8 +20,8 @@ const ContactRequestContainer = (props) => {
             <h3>
               {props.firstname} {props.lastname}
             </h3>
-            <h3>Object : {props.object}</h3>
-            <h3>Message : </h3>
+            <h4>Object : {props.object}</h4>
+            <h4>Message : </h4>
           </article>
           <article className="contactreq-message">
             <p>{props.message}</p>
