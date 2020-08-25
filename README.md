@@ -1,6 +1,6 @@
 # doctalkfusion   
 
-Fusion dossiers Front
+Dossier Front
 
 ## Participation au Hackathon Doctolib 2020   
 
